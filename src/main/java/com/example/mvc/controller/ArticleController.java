@@ -27,6 +27,8 @@ public class ArticleController {
 //            System.out.println(articleParams.getLowPrice());
 //            System.out.println(articleParams.getHighPrice());
 //        }
+
+        System.out.println();
         ModelAndView modelAndView = new ModelAndView("all-articles");
         modelAndView.addObject("articles", articleService.getAllArticles());
         modelAndView.addObject("name", "Sergey");
