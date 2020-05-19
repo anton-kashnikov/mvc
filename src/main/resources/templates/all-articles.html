@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>All articles</h1>
+<table>
+    <p th:text="${name}"></p>
+
+    <th:block th:each="article : ${articles}">
+        <tr>
+            <td th:text="${article.name}">..ghasj.</td>
+            <td th:text="${article.description}">..ghasj.</td>
+            <td th:text="${article.price}">..ghasj.</td>
+            <td th:text="${article.quantity}">..ghasj.</td>
+        </tr>
+    </th:block>
+</table>
+<form action="#" th:action="@{/article}" th:object="${articleParams}" method="post">
+    <p>Low Price: <input type="number" th:field="*{lowPrice}" /></p>
+    <p>High Price: <input type="number" th:field="*{highPrice}" /></p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
+</body>
+</html>
